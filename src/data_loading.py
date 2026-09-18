@@ -96,6 +96,26 @@ def create_iris_dataframe(source='auto'):
     
     return df
 
+
+def explore_dataset(source='auto', show_head=True):
+    """
+    Backwards-compatible helper used by the CLI to explore the dataset.
+
+    Returns a pandas DataFrame. Prints a short preview when `show_head` is True.
+    """
+    df = create_iris_dataframe(source)
+    try:
+        print("\U0001F50D معاينة مجموعة البيانات:")
+        if show_head:
+            # print a compact preview
+            print(df.head().to_string(index=False))
+        print(f"\u2705 تم تحميل البيانات: {len(df)} صفاً، {len(df.columns)} أعمدة")
+    except Exception:
+        # Don't break callers if printing fails for any reason
+        pass
+
+    return df
+
 # دالة مساعدة للتحقق من البيانات
 def check_data_files():
     """
