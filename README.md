@@ -1,22 +1,12 @@
 # 🌸 Iris Flower Classification Project
 
-
-
 ---
-
-
 
 ## 🚀 Overview
 
-
-
 This project is a comprehensive machine learning application for automatic classification of iris flowers based on their sepal and petal measurements. It implements multiple machine learning algorithms to predict iris species with a modern web interface built using Streamlit. The project demonstrates complete ML workflow including data processing, model training, evaluation, and deployment.
 
-
-
 ---
-
-
 
 ## 👤 Author
 
@@ -28,23 +18,15 @@ This project is a comprehensive machine learning application for automatic class
 
 - **Email:** [h775912609@gmail.com]
 
-
-
 ---
 
-
-
 ## ⚙️ Installation & Setup
-
-
 
 ### Prerequisites
 
 - Python 3.12+
 
 - UV package manager ([Installation Guide](https://github.com/astral-sh/uv))
-
-
 
 ### Initial Setup
 
@@ -56,33 +38,23 @@ git clone <repository-url>
 
 cd iris-classification-project
 
-
-
 # Initialize UV project
 
 uv init
-
-
 
 # Install core dependencies
 
 uv add pandas scikit-learn matplotlib seaborn numpy jupyter streamlit
 
-
-
 # Install development dependencies
 
 uv add --dev pytest black flake8
-
-
 
 # Sync all dependencies
 
 uv sync
 
 ```
-
-
 
 ### Alternative Installation Methods
 
@@ -92,23 +64,15 @@ uv sync
 
 pip install pandas scikit-learn matplotlib seaborn numpy jupyter streamlit
 
-
-
 # Or using requirements.txt (if available)
 
 pip install -r requirements.txt
 
 ```
 
-
-
 ---
 
-
-
 ## 🗂️ Project Structure
-
-
 
 ```
 
@@ -150,15 +114,9 @@ iris-classification-project/
 
 ```
 
-
-
 ---
 
-
-
 ## 🛠️ Development Commands
-
-
 
 ### Project Setup & Management
 
@@ -169,8 +127,6 @@ iris-classification-project/
 git init
 
 git remote add origin <repository-url>
-
-
 
 # UV dependency management
 
@@ -184,8 +140,6 @@ uv list # Show installed packages
 
 ```
 
-
-
 ### Data Management
 
 ```bash
@@ -195,8 +149,6 @@ uv list # Show installed packages
 uv run python src/data_loading.py
 
 uv run python -c "from src.data_loading import explore_dataset; explore_dataset('csv')"
-
-
 
 # Check data files
 
@@ -214,8 +166,6 @@ print('Shape:', df.shape)
 
 ```
 
-
-
 ### Model Training & Evaluation
 
 ```bash
@@ -225,8 +175,6 @@ print('Shape:', df.shape)
 uv run python src/model_training.py
 
 uv run python main.py --mode train
-
-
 
 # Evaluate specific model
 
@@ -250,8 +198,6 @@ print(f'Best model: {best_name} with accuracy: {best_acc:.4f}')
 
 ```
 
-
-
 ### Prediction & Inference
 
 ```bash
@@ -259,8 +205,6 @@ print(f'Best model: {best_name} with accuracy: {best_acc:.4f}')
 # Make predictions
 
 uv run python main.py --mode predict --features 5.1 3.5 1.4 0.2
-
-
 
 # Interactive prediction
 
@@ -272,15 +216,11 @@ from src.model_training import train_models, get_best_model
 
 from src.data_loading import load_iris_data
 
-
-
 X, y, feature_names, target_names = load_iris_data('csv')
 
 results = train_models(X, y)
 
 best_model, best_name, best_acc = get_best_model(results)
-
-
 
 prediction = predict_new_sample(best_model, [5.1, 3.5, 1.4, 0.2], target_names)
 
@@ -289,8 +229,6 @@ print('Prediction:', prediction)
 "
 
 ```
-
-
 
 ### Web Interface
 
@@ -302,8 +240,6 @@ uv run streamlit run src/web_interface.py
 
 uv run python main.py --mode web
 
-
-
 # Alternative execution methods
 
 python -m streamlit run src/web_interface.py
@@ -312,8 +248,6 @@ streamlit run src/web_interface.py
 
 ```
 
-
-
 ### Testing & Validation
 
 ```bash
@@ -321,8 +255,6 @@ streamlit run src/web_interface.py
 # Run all tests
 
 uv run python main.py --mode test
-
-
 
 # Test specific components
 
@@ -336,8 +268,6 @@ X, y, features, targets = load_iris_data('csv')
 
 print('Data loading: OK')
 
-
-
 # Test model training
 
 from src.model_training import train_models
@@ -345,8 +275,6 @@ from src.model_training import train_models
 results = train_models(X, y)
 
 print('Model training: OK')
-
-
 
 # Test utilities
 
@@ -360,8 +288,6 @@ print('Utilities: OK')
 
 ```
 
-
-
 ### Jupyter Notebook
 
 ```bash
@@ -372,15 +298,11 @@ uv run jupyter notebook
 
 uv run jupyter lab
 
-
-
 # Run specific notebook
 
 uv run jupyter notebooks/iris_analysis.ipynb
 
 ```
-
-
 
 ### Code Quality & Formatting
 
@@ -390,13 +312,9 @@ uv run jupyter notebooks/iris_analysis.ipynb
 
 uv run black src/ notebooks/
 
-
-
 # Linting with flake8
 
 uv run flake8 src/
-
-
 
 # Run tests with pytest
 
@@ -404,15 +322,9 @@ uv run pytest tests/ -v
 
 ```
 
-
-
 ---
 
-
-
 ## 🤖 Model Details
-
-
 
 **Algorithms Implemented:**
 
@@ -424,11 +336,7 @@ uv run pytest tests/ -v
 
 - Support Vector Machine (SVM)
 
-
-
 **Best Performing Model:** Random Forest (typically achieves 96-100% accuracy)
-
-
 
 **Feature Set:**
 
@@ -440,8 +348,6 @@ uv run pytest tests/ -v
 
 - Petal Width (cm)
 
-
-
 **Target Classes:**
 
 - Iris-setosa (0)
@@ -449,8 +355,6 @@ uv run pytest tests/ -v
 - Iris-versicolor (1)
 
 - Iris-virginica (2)
-
-
 
 **Validation Strategy:**
 
@@ -460,15 +364,9 @@ uv run pytest tests/ -v
 
 - Cross-validation ready implementation
 
-
-
 ---
 
-
-
 ## 📊 Performance Metrics
-
-
 
 The project includes comprehensive evaluation:
 
@@ -482,15 +380,9 @@ The project includes comprehensive evaluation:
 
 - ROC curves and AUC scores (where applicable)
 
-
-
 ---
 
-
-
 ## 🖥️ Web Application Features
-
-
 
 **Real-time Prediction:**
 
@@ -502,8 +394,6 @@ The project includes comprehensive evaluation:
 
 - Visual feedback and results display
 
-
-
 **Data Exploration:**
 
 - Data statistics and summaries
@@ -513,8 +403,6 @@ The project includes comprehensive evaluation:
 - Correlation analysis
 
 - Feature relationships
-
-
 
 **Model Comparison:**
 
@@ -526,15 +414,9 @@ The project includes comprehensive evaluation:
 
 - Model selection guidance
 
-
-
 ---
 
-
-
 ## 🔧 Troubleshooting Commands
-
-
 
 ```bash
 
@@ -543,8 +425,6 @@ The project includes comprehensive evaluation:
 python --version
 
 uv --version
-
-
 
 # Verify installation
 
@@ -558,13 +438,9 @@ import streamlit as st; print('Streamlit:', st.__version__)
 
 "
 
-
-
 # Resolve path issues
 
 uv run python -c "import sys; print('Python path:', sys.path)"
-
-
 
 # Check file existence
 
@@ -580,15 +456,9 @@ print('src directory exists:', os.path.exists('src/'))
 
 ```
 
-
-
 ---
 
-
-
 ## 📦 Dependency Management
-
-
 
 **Core Dependencies:**
 
@@ -606,8 +476,6 @@ print('src directory exists:', os.path.exists('src/'))
 
 - streamlit ≥1.28.0
 
-
-
 **Development Dependencies:**
 
 - pytest ≥7.0.0
@@ -616,15 +484,9 @@ print('src directory exists:', os.path.exists('src/'))
 
 - flake8 ≥6.0.0
 
-
-
 ---
 
-
-
 ## 🚀 Deployment Options
-
-
 
 ### Local Execution
 
@@ -633,8 +495,6 @@ print('src directory exists:', os.path.exists('src/'))
 uv run streamlit run src/web_interface.py
 
 ```
-
-
 
 ### Docker Containerization
 
@@ -656,8 +516,6 @@ CMD ["streamlit", "run", "src/web_interface.py"]
 
 ```
 
-
-
 ### EXE Packaging (Windows)
 
 ```bash
@@ -666,27 +524,15 @@ uv run pyinstaller main.py --onefile --hidden-import=streamlit
 
 ```
 
-
-
 ---
-
-
 
 ## 📝 License
 
-
-
 This project is developed for educational and research purposes. All code is open-source and available for academic use.
-
-
 
 ---
 
-
-
 ## 💡 Future Enhancements
-
-
 
 - [ ] Docker containerization
 
@@ -704,15 +550,9 @@ This project is developed for educational and research purposes. All code is ope
 
 - [ ] Multi-language support
 
-
-
 ---
 
-
-
 ## 🤝 Contributing
-
-
 
 1. Fork the repository
 
@@ -724,15 +564,9 @@ This project is developed for educational and research purposes. All code is ope
 
 5. Submit a pull request
 
-
-
 ---
 
-
-
 ## 📧 Support
-
-
 
 For questions and support:
 
@@ -742,11 +576,7 @@ For questions and support:
 
 - Documentation: [page 1 ]
 
-
-
 ---
-
-
 
 > **Developed by Hassan Muqbil Murshid**
 
