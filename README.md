@@ -1,7 +1,14 @@
-# 🌸 Iris Flower Classification Project
+# Machine Learning Iris Species Classifier & Analytics Dashboard
+
+[![Python](https://img.shields.io/badge/Python-3.10%2B-blue.svg?logo=python&logoColor=white)](https://www.python.org/)
+[![Streamlit](https://img.shields.io/badge/Streamlit-Dashboard-FF4B4B.svg?logo=streamlit&logoColor=white)](https://streamlit.io/)
+[![Scikit-Learn](https://img.shields.io/badge/scikit--learn-ML%20Engine-F7931E.svg?logo=scikit-learn&logoColor=white)](https://scikit-learn.org/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![Status](https://img.shields.io/badge/Status-Production%20Ready-brightgreen.svg)]()
+
+A comprehensive, production-grade machine learning platform performing multiclass botanical classification on Fisher's Iris dataset. Features full exploratory data analysis (EDA), multi-model benchmarking (KNN, SVM, Random Forest, Logistic Regression), hyperparameter tuning, and an interactive real-time inference web application powered by Streamlit.
 
 ---
-
 ## 🚀 Overview
 
 This project is a comprehensive machine learning application for automatic classification of iris flowers based on their sepal and petal measurements. It implements multiple machine learning algorithms to predict iris species with a modern web interface built using Streamlit. The project demonstrates complete ML workflow including data processing, model training, evaluation, and deployment.
@@ -578,8 +585,20 @@ For questions and support:
 
 ---
 
-> **Developed by Hassan Muqbil Murshid**
+> **---
 
-> *Machine Learning Enthusiast & Computer Science Student*
+## License
 
-> *University of Sana'a*
+Distributed under the **MIT License**. See `LICENSE` for more information.
+
+---
+
+## Author & Contact
+
+**Hassan Moqbel**  
+*Mechatronics Engineering | Systems & Control Automation*  
+Faculty of Engineering, Sana'a University  
+
+* **GitHub:** [@Hassan-Moqbel](https://github.com/Hassan-Moqbel)
+* **Email:** [hassan.moqbel.eng@gmail.com](mailto:hassan.moqbel.eng@gmail.com)
+* **LinkedIn:** [Hassan Moqbel](https://www.linkedin.com/in/hassan-moqbel)
