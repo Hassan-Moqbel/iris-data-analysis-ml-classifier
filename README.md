@@ -15,18 +15,6 @@ This project is a comprehensive machine learning application for automatic class
 
 ---
 
-## 👤 Author
-
-- **Hassan Moqbel Morshed**
-
-- **Mechatronics Student, University of Sana'a**
-
-- **Academic Number:** [202274198]
-
-- **Email:** [h775912609@gmail.com]
-
----
-
 ## ⚙️ Installation & Setup
 
 ### Prerequisites
@@ -572,20 +560,6 @@ This project is developed for educational and research purposes. All code is ope
 5. Submit a pull request
 
 ---
-
-## 📧 Support
-
-For questions and support:
-
-- Email: [eng-hassan-moqbel]
-
-- GitHub Issues: [https://github.com/eng-hassan-moqbel/iris-classification-project.wiki.git]
-
-- Documentation: [page 1 ]
-
----
-
-> **---
 
 ## License
 
